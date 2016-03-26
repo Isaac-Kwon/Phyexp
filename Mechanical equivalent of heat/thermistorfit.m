@@ -114,11 +114,17 @@ fitp = fit(A(:,1), A(:,2),'linearinterp')
 close all
 
 figure
-plot(A(:,1),A(:,2),'o');
+plot1 = plot(A(:,1),A(:,2),'x');
 hold on
-plot(fitp);
-hold off
+plot2 = plot(fitp);
 
+legend('TablePoint','Fit - LinearInterpolation')
+%legend(plot2,'Fit - LinearInterpolation')
+
+xlabel('Temperature ( ^{\circ}C )')
+ylabel('Resistance (Ohm)')
+
+hold off
 
 format long;
 corrcoef(A(:,2),fitp(A(:,1)))
