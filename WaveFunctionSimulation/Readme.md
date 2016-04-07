@@ -36,5 +36,5 @@ The m-Files for Drawing surface wave's diffraction by slit
 ###Revision
   * 2016 - 04 - 07
 Paralell Operation Optimization <br>
-The Original (did'nt optimize) is 'diffractionFunctionplot2.m' and 'DdiffractionFunctionplot2.m'<br>
+The Original (did'nt optimize) is 'diffractionFunctionplot2.m' and 'DdiffractionFunctionplot2.m' (in folder 'Origunal Code')<br>
 
