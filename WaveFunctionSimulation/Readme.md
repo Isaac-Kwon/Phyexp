@@ -22,6 +22,7 @@ The m-Files for Drawing surface wave's diffraction by slit
   can put variance and compare.<br>
   <br>
 
+
 2. Double Slit Diffraction and interference
   - DdiffractionFunctionplot.m <br>
   The function file for Surf Plot. <br>
@@ -32,3 +33,8 @@ The m-Files for Drawing surface wave's diffraction by slit
   Make 3 by 3 subplot. <br>
   can put variance and compare.
   
+###Revision
+  * 2016 - 04 - 07
+Paralell Operation Optimization <br>
+The Original (did'nt optimize) is 'diffractionFunctionplot2.m' and 'DdiffractionFunctionplot2.m'<br>
+
