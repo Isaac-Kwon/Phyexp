@@ -1,4 +1,4 @@
-function [] = DdiffractionFunctionplot(wavelength, slitx, slitg)
+function [] = DdiffractionFunctionplot2(wavelength, slitx, slitg)
 
 %clc
 %clearvars -except wavelength slitx vali valj
@@ -17,11 +17,9 @@ k = 2*pi/wavelength;
 w = 1;
 t = 0;
 
+wavefunc = @(r) A*sin(k*r - w*t);
 
-integraldivide = slitx*slitdivide; %slit divide
-
-wavefunc = @(r) A*sin(k*r - w*t)./sqrt(r);
-EucDM = @(r1x, r1y, r2x, r2y) sqrt( (r1x - r2x).^2 + (r1y - r2y).^2 ) ;
+wavefunc2 = @(r1,r2) wavefunc(EucD(r1,r2))/(EucD(r1,r2))^(1/2);
 
 xrange = [0,20];
 yrange = [0,20];
@@ -34,8 +32,7 @@ slit = cell(1,2);
 slit{1} = [mean(xrange)-slitg/2-slitx, mean(xrange)-slitg/2];
 slit{2} = [mean(xrange)+slitg/2, mean(xrange)+slitg/2+slitx];
 
-slitrange{1} = linspace(slit{1}(1), slit{1}(2), integraldivide);
-slitrange{2} = linspace(slit{2}(1), slit{2}(2), integraldivide);
+integraldivide = slitx*slitdivide; %slit divide
 
 A = A/slitx;
 
@@ -46,16 +43,34 @@ clear divide
 values = cell(1,2);
 
 
-for j = 1:size(values,2)
+for k = 1:2
+    i=1;
+    for xval = xrange
 
-    for i = 1:integraldivide
+        j = 1;
 
-        values{j} (:,:,i) = wavefunc( EucDM(Xrange, Yrange, slitrange{j}(i),0 ) );
+        for yval = yrange
 
+            r1 = [xval yval];
+
+            vals = [];
+
+            for intval = linspace(slit{k}(1),slit{k}(2),integraldivide)
+
+                r2 = [intval,0];
+                vals = [vals (wavefunc2(r1, r2)/integraldivide)];
+
+            end
+
+            values{k}(j,i) = sum(vals);
+
+
+            j=j+1;
+
+        end
+        i=i+1;
     end
-
-    values{j} = sum(values{j},3);
-
+    
 end
 
 
