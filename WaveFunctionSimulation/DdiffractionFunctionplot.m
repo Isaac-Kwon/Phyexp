@@ -9,7 +9,7 @@ function [] = DdiffractionFunctionplot(wavelength, slitx, slitg)
 
 EucD = @(r1,r2) sqrt( sum ( (r1 - r2).^2) );
 
-divide = 100;  %set the Resolution of graph
+divide = 200;  %set the Resolution of graph
 slitdivide = 40; %set the Resolution of Numerical Integration
 
 A = 1;
@@ -59,7 +59,7 @@ for j = 1:size(values,2)
 end
 
 
-values2 = values{1} + values{2};
+values2 = (values{1} + values{2})/integraldivide;
 
 %close all
 
