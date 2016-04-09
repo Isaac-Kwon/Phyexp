@@ -33,14 +33,13 @@ The m-Files for Drawing diffraction of surface wave and Light
   Make 3 by 3 subplot. <br>
   can put variance and compare.
 
- 3.  Single Slit Diffraction (Light)
+3.  Single Slit Diffraction (Light)
   - diffractionFunctionplot2.m <br>
   The function file for 2D plot<br>
   input : slit hole width, wavelength, distance between slit and screen <br>
 <br>
   It makes intensity graph light's single slit diffraction.<br>
-<br>
-  A few part didn't optimize paralell operation (Martix Operation)
+  A few part didn't optimize paralell operation (Martix Operation) - will be very slow
 
   
 ###Revision
