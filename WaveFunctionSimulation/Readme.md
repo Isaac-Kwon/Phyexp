@@ -19,9 +19,7 @@ The m-Files for Drawing diffraction of surface wave and Light
   - diffraction.m <br>
   Script file to make plots on grid of subplots. <br>
   Make 3 by 3 subplot. <br>
-  can put variance and compare.<br>
-  <br>
-
+  can put variance and compare.
 
 2. Double Slit Diffraction and interference (Surface Wave)
   - DdiffractionFunctionplot.m <br>
@@ -37,8 +35,7 @@ The m-Files for Drawing diffraction of surface wave and Light
   - diffractionFunctionplot2.m <br>
   The function file for 2D plot<br>
   input : slit hole width, wavelength, distance between slit and screen <br>
-<br>
-  It makes intensity graph light's single slit diffraction.<br>
+  It makes intensity graph of light's single slit diffraction.<br>
   A few part didn't optimize paralell operation (Martix Operation) - will be very slow
 
   
