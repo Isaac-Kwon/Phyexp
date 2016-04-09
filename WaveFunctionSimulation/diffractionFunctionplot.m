@@ -35,7 +35,9 @@ A = A/slitx;
 
 [Xrange, Yrange] = meshgrid(xrange,yrange);
 
-values = [];
+
+%values = [];
+values = zeros(size(Xrange,1),size(Yrange,2),integraldivide);
 
 for i = 1:integraldivide
     
