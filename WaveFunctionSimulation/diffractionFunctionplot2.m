@@ -17,7 +17,7 @@ wavefunc = @(r,t) A*cos(k*r+t)./r;
 EucDM = @(r1x, r1y, r2x, r2y) sqrt( (r1x - r2x).^2 + (r1y - r2y).^2 ) ;
 
 
-xrange = [0,2];
+xrange = [0,5];
 
 xrange = linspace(xrange(1),xrange(2),divide);
 
@@ -60,7 +60,7 @@ plot( xrange ,values)
 
 
 pt1 = ['Wavelength : ', num2str(wavelength),'    Slit Size : ',  num2str(slitx)];
-pt2 = ['RangeDivide: ', num2str(divide),'     SlitDivide : ',num2str(slitdivide),'     AngleDivide : ',num2str(angledivide)];
+pt2 = ['RangeDivide: ', num2str(divide),'     SlitDivide : ',num2str(slitdivide)];
 title({pt1; pt2});
 
 end
