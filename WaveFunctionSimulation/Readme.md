@@ -36,7 +36,6 @@ The m-Files for Drawing diffraction of surface wave and Light
   The function file for 2D plot<br>
   input : slit hole width, wavelength, distance between slit and screen <br>
   It makes intensity graph of light's single slit diffraction.<br>
-  A few part didn't optimize paralell operation (Martix Operation) - will be very slow
 
   
 ###Revision
