@@ -40,5 +40,8 @@ The m-Files for Drawing diffraction of surface wave and Light
 
   
 ###Revision
-  * 2016 - 04 - 07
+  * 2016 - 04 - 07 <br>
 Paralell Operation Optimization - Using Matrix Operation (Surface wave) <br>
+  * 2016 - 04 - 10 <br>
+Paralell Operation Optimization - Using Matrix Operation (Light) <br>
+
