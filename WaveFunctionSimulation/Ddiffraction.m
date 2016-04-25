@@ -16,7 +16,7 @@ for vali = Gvali
         subplot(size(Gslitg,2),size(Gwavelength,2),k)
        
         fprintf('Evaluate %d %d \n', vali, valj)
-        DdiffractionFunctionplot(Gwavelength(valj), Gslitx, Gslitg(vali))
+        interferenceFunctionplot(Gwavelength(valj), Gslitx, Gslitg(vali))
         shading interp
         
         k=k+1;
