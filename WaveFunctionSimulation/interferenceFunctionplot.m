@@ -1,4 +1,4 @@
-function [] = DdiffractionFunctionplot(wavelength, slitx, slitg)
+function [] = interferenceFunctionplot(wavelength, slitx, slitg)
 
 %clc
 %clearvars -except wavelength slitx vali valj
