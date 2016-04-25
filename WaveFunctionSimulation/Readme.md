@@ -50,9 +50,6 @@ The m-Files for Drawing diffraction of surface wave and Light
   Script file to make plots <br>
   It help making plot. (Specify variable with comment)
 
-  - diffractionFunction2.m <br>
-  The function to calculate above plot code. <br>
-
 
 
 
