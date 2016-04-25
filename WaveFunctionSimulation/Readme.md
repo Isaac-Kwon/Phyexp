@@ -4,8 +4,10 @@ Tested by MATLAB 2016a
 ##Diffraction
 The m-Files for Drawing diffraction of surface wave and Light
 
-1. Single Slit Diffraction
-2. Double Slit Diffraction
+1. Single Slit Diffraction (SurfaceWave)
+2. Double Slit Diffraction (SurfaceWave)
+3. Single Slit Diffraction (Light) - 2D plot
+4. Double Slit Diffraction (Light) - 2D plot
 
 ###File Detail
 
@@ -39,14 +41,16 @@ The m-Files for Drawing diffraction of surface wave and Light
   
   
 4.  Double Slit Diffraction and Interference (Light)
-  - InterferenceFunctionplot2.m
+  - InterferenceFunctionplot2.m <br>
   The function file for 2D plot<br>
   input : wavelength, slit size, slit gap, plot range - xrange, distance to screens <br>
   It makes intensity graph of light's double slit diffraction and interference.<br>
 
+  - interference2.m <br>
+  Script file to make plots <br>
+  It help making plot. (Specify variable with comment)
 
-
-  - diffractionFunction2.m
+  - diffractionFunction2.m <br>
   The function to calculate above plot code. <br>
 
 
@@ -58,4 +62,7 @@ The m-Files for Drawing diffraction of surface wave and Light
 Paralell Operation Optimization - Using Matrix Operation (Surface wave) <br>
   * 2016 - 04 - 10 <br>
 Paralell Operation Optimization - Using Matrix Operation (Light) <br>
+  * 2016 - 04 - 25 <br>
+Add Function of Light Diffraction and Interference <br>
+Rename (Ddiffraction -> Interference)
 
