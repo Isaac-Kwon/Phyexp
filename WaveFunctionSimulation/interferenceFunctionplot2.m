@@ -30,7 +30,7 @@ xrange = linspace(xrange(1),xrange(2),divide);
 
 P1 = plot( xrange ,values);
 
-pt1 = ['Wavelength : ', num2str(wavelength)];
+pt1 = ['Wavelength : ', num2str(wavelength*10^9),'nm'];
 pt2 = ['    Slit Size : ',  num2str(slita*1000), 'mm' ,'    Slit Gap : ', num2str(slitd*1000), 'mm' ];
 title({pt1;pt2});
 xlabel('Position (mm)');
