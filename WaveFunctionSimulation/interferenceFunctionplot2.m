@@ -1,6 +1,6 @@
 
 
-function [] = interferenceFunctionplot2(wavelength, slita, slitd, pxrange, Y)
+function P1 = interferenceFunctionplot2(wavelength, slita, slitd, pxrange, Y)
 
 % wavelength = 650*10^(-9);
 
@@ -12,7 +12,7 @@ function [] = interferenceFunctionplot2(wavelength, slita, slitd, pxrange, Y)
 
 slit = slita*[-1 1]/2;
 pxrange = [-1 1]*pxrange;
-divide = 1024;
+divide = 2048;
 integraldivide = 128;
 
 
@@ -28,7 +28,7 @@ xrange = [-10,10]*10^(-3);
 
 xrange = linspace(xrange(1),xrange(2),divide);
 
-plot( xrange ,values)
+P1 = plot( xrange ,values);
 
 %pt1 = ['Wavelength : ', num2str(wavelength),'    Slit Size : ',  num2str(sum(abs(slit)))];
 %pt2 = ['RangeDivide: ', num2str(divide),'     SlitDivide : ',num2str(slitdivide),'     AngleDivide : ',num2str(angledivide)];
@@ -46,7 +46,7 @@ function values = diffractionFunction2(wavelength, slit, Y, xrange, divide)
 
 %divide = 512;  %set the Resolution of graph
 integraldivide = 128;%10^11; %set the Resolution of Numerical Integration
-angledivide = 64;
+angledivide = 128;
 
 A = 1;
 k = 2*pi/wavelength;
