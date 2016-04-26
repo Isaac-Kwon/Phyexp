@@ -16,19 +16,19 @@ divide = 2048;
 integraldivide = 128;
 
 
-A = diffractionFunction2(wavelength, slit-slitd, Y, pxrange, divide);
-B = diffractionFunction2(wavelength, slit+slitd, Y, pxrange, divide);
+A = diffractionFunction2(wavelength, slit-slitd/2, Y, pxrange, divide);
+B = diffractionFunction2(wavelength, slit+slitd/2, Y, pxrange, divide);
 values = A+B;
 
 values = abs((sum(values,2)/integraldivide));
 
 values = (sum(values,3)).^2;
 
-xrange = [-10,10]*10^(-3);
+%pxrange = [-10,10]*10^(-3);
 
-xrange = linspace(xrange(1),xrange(2),divide);
+pxrange = linspace(pxrange(1),pxrange(2),divide);
 
-P1 = plot( xrange ,values);
+P1 = plot( pxrange ,values);
 
 pt1 = ['Wavelength : ', num2str(wavelength*10^9),'nm'];
 pt2 = ['    Slit Size : ',  num2str(slita*1000), 'mm' ,'    Slit Gap : ', num2str(slitd*1000), 'mm' ];
@@ -42,7 +42,7 @@ function values = diffractionFunction2(wavelength, slit, Y, xrange, divide)
 
 %divide = 512;  %set the Resolution of graph
 integraldivide = 128;%10^11; %set the Resolution of Numerical Integration
-angledivide = 128;
+angledivide = 256;
 
 A = 1;
 k = 2*pi/wavelength;
@@ -59,8 +59,6 @@ angle = linspace(0,2*pi,angledivide);
 
 
 [Xrange, S, Ag] = ndgrid(xrange,  slitrange, angle);
-
-clearvars -except wavefunc EucDM Xrange xrange Y S Ag wavelength slitx divide slitdivide angledivide integraldivide
 
 values = wavefunc( EucDM(Xrange, Y, S ,0) , Ag)/angledivide;
 

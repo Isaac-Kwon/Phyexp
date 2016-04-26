@@ -1,4 +1,4 @@
-function [] = diffractionFunctionplot(wavelength, slitx)
+function [] = diffractionFunctionplot(wavelength, slitx, )
 
 %clc
 %clearvars -except wavelength slitx vali valj

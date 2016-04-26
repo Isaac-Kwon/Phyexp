@@ -1,4 +1,4 @@
-function [] = diffractionFunctionplot2(wavelength, slitx, Y)
+function p1 = diffractionFunctionplot2(wavelength, slitx,pxrange, Y)
 
 %clc
 %clearvars -except wavelength slitx vali valj
@@ -7,8 +7,8 @@ function [] = diffractionFunctionplot2(wavelength, slitx, Y)
 % slitx = 5
 
 divide = 256;  %set the Resolution of graph
-slitdivide = 256;%10^11; %set the Resolution of Numerical Integration
-angledivide = 256;
+slitdivide = 512;%10^11; %set the Resolution of Numerical Integration
+angledivide = 512;
 
 A = 1;
 k = 2*pi/wavelength;
@@ -17,13 +17,13 @@ wavefunc = @(r,t) A*cos(k*r+t)./r;
 EucDM = @(r1x, r1y, r2x, r2y) sqrt( (r1x - r2x).^2 + (r1y - r2y).^2 ) ;
 
 
-xrange = [0,2];
+pxrange = pxrange*[-1,1];
 
-xrange = linspace(xrange(1),xrange(2),divide);
+pxrange = linspace(pxrange(1),pxrange(2),divide);
 
 integraldivide = slitdivide;  %slitx*slitdivide; %slit divide
 
-slit = [mean(xrange)-(slitx/2), mean(xrange)+(slitx/2)];
+slit = [-1,1]*slitx/2;
 slitrange = linspace(slit(1), slit(2), integraldivide);
 
 
@@ -32,9 +32,9 @@ angle = linspace(0,2*pi,angledivide);
 
 %values = [];%zeros([size(xrange,2) size(slitrange,2) size(angle,2)]);
 
-[Xrange, S, Ag] = ndgrid(xrange,  slitrange, angle);
+[Xrange, S, Ag] = ndgrid(pxrange,  slitrange, angle);
 
-clearvars -except wavefunc EucDM Xrange xrange Y S Ag wavelength slitx divide slitdivide angledivide integraldivide
+clearvars -except wavefunc EucDM Xrange xrange Y S Ag wavelength slitx divide slitdivide angledivide integraldivide pxrange
 
 values = wavefunc( EucDM(Xrange, Y, S ,0) , Ag);
 
@@ -48,9 +48,9 @@ values = wavefunc( EucDM(Xrange, Y, S ,0) , Ag);
 
 values = abs((sum(values,2)/integraldivide));
 
-values = (sum(values,3)).^2;
+values = (sum(values,3)/angledivide).^2;
 
-plot( xrange ,values)
+p1 = plot( pxrange ,values);
 
 
 
