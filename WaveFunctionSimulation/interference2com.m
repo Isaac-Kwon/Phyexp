@@ -16,8 +16,21 @@ Ttl1 = ['Wavelength : ',num2str(wavelength*10^9),'nm','  ','Distance : ',num2str
 Ttl2 = ['SlitSize : ',num2str(slita*10^3),'mm'];
 title({Ttl1;Ttl2})
 
+p1.LineStyle = '-';
 p2.LineStyle = '--';
 p3.LineStyle = '-.';
+
+linewid = 1.75;
+
+p1.LineWidth = linewid;
+p2.LineWidth = linewid;
+p3.LineWidth = linewid;
+
+col = [0,0,0];
+p1.Color= col;
+p2.Color = col;
+p3.Color = col;
+
 
 hold off
 legend('d = 0.5 mm','d = 0.25 mm','d = 0.125 mm');

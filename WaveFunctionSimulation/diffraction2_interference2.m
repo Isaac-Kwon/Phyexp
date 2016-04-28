@@ -1,7 +1,7 @@
 wavelength = 650e-9; %wavelength of laser (coherent wave)
 slita = 0.04*10^-3; %size of slit
 slitd = 0.25*10^-3; %gap of slit
-pxrange = 38*10^-3; %plotting range (xrange)
+pxrange = 60*10^-3; %plotting range (xrange)
 Y = 1.045; %distance to screen
 
 figure
@@ -14,6 +14,18 @@ hold off
 
 p2.YData = (p2.YData)*(max(p1.YData)/max(p2.YData));
 
+
+p1.LineStyle = '-';
+p2.LineStyle = '--';
+
+linewid = 1.75;
+
+p1.LineWidth = linewid;
+p2.LineWidth = linewid;
+
+col = [0,0,0];
+p1.Color= col;
+p2.Color = col;
 
 Ttl1 = ['Wavelength : ',num2str(wavelength*10^9),'nm','  ','Distance : ',num2str(Y*10^2),'cm'];
 Ttl2 = ['SlitSize : ',num2str(slita*10^3),'mm','  ','SlitGap : ',num2str(slitd*1000),'mm'];
