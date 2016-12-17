@@ -1,7 +1,7 @@
 
 Gwavelength = [2 4 8];
 Gslitg = [2 4 10];
-Gslitx = 2;
+Gslitx = 1;
 
 close all
 figure

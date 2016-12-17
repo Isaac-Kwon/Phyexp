@@ -7,12 +7,12 @@ c = 299792458;
 
 intensity2 = @(wl,T) ( (2 * pi * h * c^2 ) ./ (wl.^5) ) .* (1./(exp((h*c)./(wl*k.*T))));
 
-wavemin = 0;
-wavemax = 6000*10^(-9);
-wavedi = 400;
+wavemin = 0*10^(-9);
+wavemax = 2000*10^(-9);
+wavedi = 200;
 
 wavelength = linspace(wavemin,wavemax,wavedi);
-datat = linspace(0,8000,400);
+datat = linspace(7000,8000,200);
 
 [W,T] = meshgrid(wavelength,datat);
 
