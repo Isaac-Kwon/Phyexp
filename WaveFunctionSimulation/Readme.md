@@ -1,7 +1,7 @@
-#Wave Function Simulation
+# Wave Function Simulation
 Tested by MATLAB 2016a
 
-##Diffraction
+## Diffraction
 The m-Files for Drawing diffraction of surface wave and Light
 
 1. Single Slit Diffraction (SurfaceWave)
@@ -9,7 +9,7 @@ The m-Files for Drawing diffraction of surface wave and Light
 3. Single Slit Diffraction (Light) - 2D plot
 4. Double Slit Diffraction (Light) - 2D plot
 
-###File Detail
+### File Detail
 
 * All plot's xlimit and ylimit is set [0, 20] <br>
 
@@ -54,7 +54,7 @@ The m-Files for Drawing diffraction of surface wave and Light
 
 
   
-###Revision
+### Revision
   * 2016 - 04 - 07 <br>
 Paralell Operation Optimization - Using Matrix Operation (Surface wave) <br>
   * 2016 - 04 - 10 <br>
